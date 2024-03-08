@@ -4,7 +4,6 @@ const bcrypt=require('bcrypt');
 
 
 async function createNewEntry(req,res){
-    
         if(data) { 
             if(data.email==req.body.email)
             return res.redirect("/register");}
@@ -19,10 +18,8 @@ async function createNewEntry(req,res){
     return res.redirect('/login');
     }}
 
-   async function showHomePage(req,res){
-        const data= await dataset.find(name);
-        console.log(data.name);
-        res.render("index.ejs", {name: req.body.name});
+    function showHomePage(req,res){
+        res.render("index.ejs");
     }
 
     function registerPage(req,res){
